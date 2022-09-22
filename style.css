@@ -1,0 +1,252 @@
+html{
+    height: 100%;
+}
+
+body{
+    position: relative;
+    min-height: 100%;
+    background: rgba(0,0,0,0.5) url("./img/bg.png");
+    background-blend-mode: darken;
+    transition: 0.7s;
+    background-size: cover;
+    font-family: monospace;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header img{
+    width: 65px;
+    margin-left: -10px;
+}
+
+.header audio{
+    margin-right: 10px;
+}
+
+.section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.disappear{
+    display: flex;
+    flex-direction: column;
+}
+
+.disappear form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-start{
+    font-size: 30px;
+    font-family: monospace;
+    letter-spacing: 1em;
+    margin-top: 18%;
+    color: #f5f5f5;
+
+    filter: drop-shadow(0 0 10px);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+   
+.btn-start {
+    animation: loading6454 1.75s ease infinite;
+}
+   
+.btn-start:nth-child(2) {
+    animation-delay: 0.25s;
+}
+   
+.btn-start:nth-child(3) {
+    animation-delay: 0.5s;
+}
+   
+.btn-start:nth-child(4) {
+    animation-delay: 0.75s;
+}
+   
+.btn-start:nth-child(5) {
+    animation-delay: 1s;
+}
+   
+.btn-start:nth-child(6) {
+    animation-delay: 1.25s;
+}
+   
+.btn-start:nth-child(7) {
+    animation-delay: 1.5s;
+}
+   
+@keyframes loading6454 {
+    0%, 100% {
+     transform: translateY(0);
+    }
+   
+    50% {
+     transform: translateY(-10px);
+    }
+}
+
+.input-newword{
+    width: 60%;
+    margin: 20px;
+    margin-top: 20%;
+    resize: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 3px;
+    background: transparent;
+    text-align: center;
+}
+
+.btn-addword{
+    font-size: 15px;
+    font-family: monospace;
+    letter-spacing: 10px;
+    margin-top: 20px;
+    color: #f5f5f5;
+    filter: drop-shadow(0 0 10px);
+    background: none;
+    border: 1px solid white;
+    padding: 10px;
+    padding-left: 13px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.addpop{
+    box-shadow: none !important;
+    letter-spacing: 10px !important;
+    padding: 10px !important;
+    border: 1px solid white !important;
+    border-radius: none !important;
+    background: none !important;
+}
+
+.appear{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.illustration{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.illustration img{
+    width: 60%;
+    border-radius: 30px;
+    margin: 10px;
+}
+
+.countdown{
+    color: white;
+    font-size: 40px;
+}
+
+.guessed{
+    display:inline-block;
+    vertical-align: middle;
+    width: 25px;
+    height: 40px;
+    margin: 15px 15px 25px 15px;
+    filter: drop-shadow(0 0 10px);
+    font-size: 35px;
+    color: #f5f5f5;
+    border-bottom: 3px solid #f5f5f5;
+    text-transform: uppercase;
+}
+
+.wrongletters{
+    height: 30px;
+}
+
+.notguessed{
+    color: #7c1616;
+    margin: 15px;
+    font-size: 25px;
+}
+
+.button{
+    margin-top: 20px;
+}
+
+.popup{
+    opacity: 0.8;
+}
+
+.titlesweet{
+    color: #f5f5f5 !important;
+    margin: 40px !important;
+    font-size: 50px !important;
+    font-style: normal !important;
+}
+
+.buttonsweet{
+    background: black !important;
+    color: white !important;
+    border: 1px solid white !important;
+    border-radius: 20px !important;
+    letter-spacing: 3px;
+    margin-top: 20px !important;
+}
+
+.btn-newgame{
+    font-size: 15px;
+    font-family: monospace;
+    letter-spacing: 10px;
+    color: #f5f5f5;
+    filter: drop-shadow(0 0 10px);
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 8px;
+    margin-right: 15px ;
+}
+
+.btn-giveup{
+    font-size: 15px;
+    font-family: monospace;
+    letter-spacing: 10px;
+    color: #f5f5f5;
+    filter: drop-shadow(0 0 10px);
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 8px;
+    margin-left: 15px;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p{
+    color:#f5f5f5
+}
+
+.content{
+    display: grid;
+    row-gap: 5px;
+    grid-template:
+    "header" 7%
+    "section" auto
+    "footer" 7% ;
+}

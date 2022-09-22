@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ahorcado</title>
+        <link rel="stylesheet" href="./style.css">
+        <!-- librerias -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    </head>
+
+    <body class="content">
+         
+        <header class="header">
+            <img src="./img/logo.svg" alt="logo">
+            <audio id=audio src="music/creepy-music-box.mp3" loop="" controls="" style="height: 25px; width: 100px;"></audio>
+        </header>
+
+        <div class="section">
+            <div id="disappear" class="disappear">
+                <input class="btn-start" type="submit" value="Iniciar Juego" id="btn-start">
+
+                <form onsubmit="return add()">
+                    <textarea maxlength="8" class="input-newword" type="text" id="input-newword" placeholder="Nueva palabra (8 letras max)" onkeypress="return event.charCode != 32" oninput="this.value = this.value.replace(/[^a-zA-Z0-9]/,'')"></textarea>
+                    <input class="btn-addword" type="submit" value="Agregar" id="btn-addword">
+                </form>
+
+            </div>
+            
+            <div id="appear" class="appear">
+                <div class="illustration">
+                    <img alt="hangman" id="hangman">
+                </div>        
+                
+                <div class="word">
+                </div>
+
+                <div class="wrongletters">
+                </div>
+
+                <div class="button">
+
+                    <input class="btn-newgame" type="submit" value="Nuevo Juego" id="btn-newgame">
+                    <input class="btn-giveup" type="submit" value="Rendirse" id="btn-giveup">
+
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2022 Jennifer Guerrero</p>
+        </footer>
+
+    <script src="./script.js"></script>
+    </body>
+
+</html>
