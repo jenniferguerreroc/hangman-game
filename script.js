@@ -195,7 +195,6 @@ function randomword(){
 }
 
 newgame()
-console.log(game)
 
 //button add new word 
 function add (){
